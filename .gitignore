@@ -1,6 +1,18 @@
-node_modules
-.DS_Store
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
 dist
 dist-ssr
+
+# misc
+.DS_Store
+
+# debug
+yarn-error.log*
+
+# local env files
 *.local
-yarn-error.log
