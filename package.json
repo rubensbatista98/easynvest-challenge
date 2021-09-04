@@ -11,16 +11,20 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.10",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "git-commit-msg-linter": "^3.2.8",
+    "husky": "^7.0.0",
+    "jest": "^27.1.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
+    "ts-node": "^10.2.1",
     "typescript": "^4.3.2",
-    "vite": "^2.5.2",
-    "husky": "^7.0.0"
+    "vite": "^2.5.2"
   }
 }
