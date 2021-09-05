@@ -1,4 +1,4 @@
-import './style.css';
+import 'styles/global.module.css';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
