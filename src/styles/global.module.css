@@ -44,13 +44,13 @@ html {
 body {
   min-height: 100vh;
 
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--fs-1);
   font-weight: 400;
 }
 
 input,
 button {
   font: inherit;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
