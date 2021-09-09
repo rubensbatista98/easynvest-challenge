@@ -1,3 +1,36 @@
+:root {
+  --brand-1-hue: 298;
+  --brand-2-hue: 328;
+  --brand-3-hue: 44;
+
+  --brand-1: var(--brand-1-hue) 39% 10%;
+  --brand-2: var(--brand-2-hue) 35% 60%;
+  --brand-3: var(--brand-3-hue) 85% 65%;
+
+  --card-surface: var(--brand-1-hue) 45% 5%;
+  --btn-surface: var(--brand-1-hue) 100% 30%;
+
+  --text-1: var(--brand-2-hue) 35% 95%;
+  --text-2: var(--brand-2-hue) 100% 75%;
+  --text-3: var(--brand-3-hue) 85% 65%;
+  --text-4: var(--brand-3-hue) 85% 65%;
+
+  --fs-1: 1.6rem;
+  --fs-2: 2rem;
+  --fs-3: 2.4rem;
+  --fs-4: 3rem;
+  --fs-5: 4.8rem;
+
+  --spacing-1: 0.8rem;
+  --spacing-2: 1.2rem;
+  --spacing-3: 1.6rem;
+  --spacing-4: 2rem;
+  --spacing-5: 2.4rem;
+  --spacing-6: 2.8rem;
+  --spacing-7: 3.2rem;
+  --spacing-7: 3.6rem;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
