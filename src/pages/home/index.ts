@@ -1,17 +1,21 @@
 import logo from 'assets/logo.svg';
 
+import headerStyles from 'styles/components/app-header.module.css';
+
 function Home() {
   const $wrapper = document.createElement('section');
 
   $wrapper.innerHTML = `
-    <header>
-      <h1>
-        <img width="200px" height="50px" src=${logo} alt="Easynvest" />
-      </h1>
+    <header class=${headerStyles['app-header']}>
+      <div class=${headerStyles.wrapper}>
+          <h1 class=${headerStyles.title}>
+            <img width="475px" height="100px" src=${logo} alt="Easynvest" />
+          </h1>
 
-      <nav>
-        <a href="/cadastrar" data-link>Novo usuário</a>
-      </nav>
+          <nav>
+            <a href="/cadastrar" data-link>Novo usuário</a>
+          </nav>
+      </div>
     </header>
 
     <main>

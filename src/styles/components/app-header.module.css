@@ -1,0 +1,40 @@
+.app-header {
+  background-color: hsl(var(--brand-2));
+}
+
+.app-header > .wrapper {
+  width: min(90%, 120rem);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--spacing-3) 0;
+  margin: 0 auto;
+}
+
+.app-header .title {
+  inline-size: 18rem;
+  block-size: 5rem;
+}
+
+.app-header .title > img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+/* 41.25rem = 660px */
+@media (min-width: 41.25rem) {
+  .app-header .title {
+    inline-size: 28rem;
+    block-size: 7rem;
+  }
+}
+
+/* 60rem = 960px */
+@media (min-width: 60rem) {
+  .app-header .title {
+    inline-size: 40rem;
+    block-size: 10rem;
+  }
+}
