@@ -1,6 +1,7 @@
 import logo from 'assets/logo.svg';
 
 import headerStyles from 'styles/components/app-header.module.css';
+import buttonStyles from 'styles/components/button.module.css';
 
 function Home() {
   const $wrapper = document.createElement('section');
@@ -13,7 +14,7 @@ function Home() {
           </h1>
 
           <nav>
-            <a href="/cadastrar" data-link>Novo usuário</a>
+            <a href="/cadastrar" data-link class=${buttonStyles.button}>Novo usuário</a>
           </nav>
       </div>
     </header>
