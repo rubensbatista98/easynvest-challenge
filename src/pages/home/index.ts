@@ -1,7 +1,12 @@
 import logo from 'assets/logo.svg';
+import editIcon from 'assets/icons/edit-icon.svg';
+import trashIcon from 'assets/icons/trash-icon.svg';
 
 import headerStyles from 'styles/components/app-header.module.css';
 import buttonStyles from 'styles/components/button.module.css';
+import cardStyles from 'styles/components/card-user.module.css';
+
+import homeStyles from './styles.module.css';
 
 function Home() {
   const $wrapper = document.createElement('section');
@@ -24,57 +29,38 @@ function Home() {
     <main class=${homeStyles.container}>
       <h1 class=${homeStyles.title}>Usuários</h1>
 
-      <div>
-        <article>
-          <h4>My name 1</h4>
+      <div class=${homeStyles['users-list']}>
+        ${Array.from({ length: 8 })
+          .map(
+            () => `
+            <article class=${cardStyles['card-user']}>
+              <h4 class=${cardStyles.name}>My name 1</h4>
 
-          <div>
-            <div>
-              <p>myemail1@test.com.br</p>
-              <p>04080757247</p>
-              <p>11987654321</p>
-            </div>
+              <div class=${cardStyles.body}>
+                <p>myemail1@test.com.br</p>
+                <p>040.807.572-47</p>
+                <p>(11) 98765-4321</p>
 
-            <div>
-              <button>Editar</button>
-              <button>Deletar</button>
-            </div>
-          </div>
-        </article>
+                <div class=${cardStyles['buttons-container']}>
+                  <button
+                    aria-label="Editar usuário"
+                    class=${cardStyles.btn}
+                  >
+                    <img src=${editIcon} aria-hidden="true" />
+                  </button>
 
-        <article>
-          <h4>My name 1</h4>
-
-          <div>
-            <div>
-              <p>myemail1@test.com.br</p>
-              <p>04080757247</p>
-              <p>11987654321</p>
-            </div>
-
-            <div>
-              <button>Editar</button>
-              <button>Deletar</button>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <h4>My name 1</h4>
-
-          <div>
-            <div>
-              <p>myemail1@test.com.br</p>
-              <p>04080757247</p>
-              <p>11987654321</p>
-            </div>
-
-            <div>
-              <button>Editar</button>
-              <button>Deletar</button>
-            </div>
-          </div>
-        </article>
+                  <button
+                    aria-label="Deletar usuário"
+                    class="${cardStyles.btn} ${cardStyles['-delete']}"
+                  >
+                    <img src=${trashIcon} aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+            </article>
+          `
+          )
+          .join('')}
       </div>
     </main>
   `;

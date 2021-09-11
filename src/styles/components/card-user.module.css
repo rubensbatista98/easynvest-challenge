@@ -1,0 +1,73 @@
+.card-user {
+  background-color: hsl(var(--card-surface));
+
+  border-radius: 10px;
+  padding: var(--spacing-2) var(--spacing-4);
+}
+
+.card-user > .name {
+  font-size: var(--fs-2);
+  color: hsl(var(--text-3));
+}
+
+.card-user > .body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-end;
+
+  gap: 0.2rem;
+  margin-block-start: var(--spacing-2);
+}
+
+.card-user > .body > p {
+  grid-column: 1 / 2;
+}
+
+.card-user > .body > p:first-of-type {
+  grid-column: 1 / -1;
+}
+
+.card-user > .body > .buttons-container {
+  grid-column: 2 / -1;
+  grid-row: 2 / 4;
+
+  display: flex;
+  gap: 10px;
+}
+
+.card-user .btn {
+  --bg: var(--btn-surface);
+  --alpha: 1;
+
+  inline-size: 4.5rem;
+  block-size: 4.5rem;
+
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: hsl(var(--bg) / var(--alpha));
+
+  cursor: pointer;
+}
+
+.card-user .btn.-delete {
+  --bg: 0 75% 50%;
+}
+
+.card-user .btn:hover {
+  --alpha: 0.8;
+}
+
+.card-user .btn:active {
+  --alpha: 0.6;
+}
+
+.card-user .btn:focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid hsl(var(--text-1));
+}
+
+.card-user .btn > img {
+  inline-size: 100%;
+  block-size: 100%;
+}
