@@ -1,0 +1,59 @@
+.wrapper {
+  min-block-size: 100vh;
+  display: grid;
+}
+
+.sidebar {
+  display: none;
+  background-color: hsl(var(--brand-2));
+
+  padding: 15rem var(--spacing-7);
+}
+
+.sidebar > .logo {
+  inline-size: 100%;
+}
+
+.container {
+  inline-size: min(90%, 51.5rem);
+  margin: var(--spacing-7) auto;
+}
+
+.container > main {
+  margin-block-start: var(--spacing-7);
+}
+
+.container > main > .title {
+  font-size: var(--fs-3);
+  letter-spacing: 0.5px;
+  color: hsl(var(--text-2));
+
+  margin-block-end: var(--spacing-5);
+}
+
+/* 41.25rem = 660px */
+@media (min-width: 41.25rem) {
+  .container {
+    margin-block-start: 8rem;
+  }
+
+  .container > main {
+    margin-block-start: 5rem;
+  }
+
+  .container > main > .title {
+    font-size: 3.5rem;
+    margin-block-end: 5rem;
+  }
+}
+
+/* 64rem = 1024px */
+@media (min-width: 64rem) {
+  .wrapper {
+    grid-template-columns: min(35%, 50rem) 1fr;
+  }
+
+  .sidebar {
+    display: block;
+  }
+}
