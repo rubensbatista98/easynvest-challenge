@@ -9,12 +9,14 @@ function Home() {
   $wrapper.innerHTML = `
     <header class=${headerStyles['app-header']}>
       <div class=${headerStyles.wrapper}>
-          <h1 class=${headerStyles.title}>
+          <div class=${headerStyles.logo}>
             <img width="475px" height="100px" src=${logo} alt="Easynvest" />
-          </h1>
+          </div>
 
           <nav>
-            <a href="/cadastrar" data-link class=${buttonStyles.button}>Novo usuário</a>
+            <a href="/cadastrar" data-link class=${buttonStyles.button}>
+              Novo usuário
+            </a>
           </nav>
       </div>
     </header>
