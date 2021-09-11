@@ -21,8 +21,8 @@ function Home() {
       </div>
     </header>
 
-    <main>
-      <h2>Usuários</h2>
+    <main class=${homeStyles.container}>
+      <h1 class=${homeStyles.title}>Usuários</h1>
 
       <div>
         <article>

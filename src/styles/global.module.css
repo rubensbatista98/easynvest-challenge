@@ -49,6 +49,9 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: var(--fs-1);
   font-weight: 400;
+
+  color: hsl(var(--text-1));
+  background-color: hsl(var(--brand-1));
 }
 
 input,

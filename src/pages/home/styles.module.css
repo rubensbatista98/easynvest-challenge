@@ -1,0 +1,35 @@
+.container {
+  max-inline-size: min(90%, var(--container));
+
+  padding-block: var(--spacing-5);
+  margin: 0 auto;
+}
+
+.container > .title {
+  font-weight: 600;
+  font-size: var(--fs-4);
+  letter-spacing: 1px;
+  color: hsl(var(--brand-2-hue) 80% 55%);
+
+  margin-block-end: var(--spacing-6);
+}
+
+/* 41.25rem = 960px */
+@media (min-width: 41.25rem) {
+  .container {
+    padding-block: 6rem;
+  }
+
+  .container > .title {
+    font-size: 4rem;
+    margin-block-end: var(--spacing-7);
+  }
+}
+
+/* 86.75rem = 1100px */
+@media (min-width: 68.75rem) {
+  .container > .title {
+    font-size: var(--fs-5);
+    margin-block-end: 8rem;
+  }
+}
