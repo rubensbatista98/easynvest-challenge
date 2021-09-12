@@ -1,4 +1,5 @@
 import logo from 'assets/logo-icon.svg';
+import inputStyles from 'styles/components/input.module.css';
 
 import registerStyles from './styles.module.css';
 
@@ -52,23 +53,23 @@ function Register() {
       <main>
         <h1 class=${registerStyles.title}>Cadastrar usuário</h1>
 
-        <form>
-          <section>
+        <form class=${registerStyles['register-form']}>
+          <section class=${inputStyles['input-block']}>
             <label for="name">Nome completo (sem abreviações)</label>
             <input type="text" id="name" name="name" />
           </section>
 
-          <section>
+          <section class=${inputStyles['input-block']}>
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" />
           </section>
 
-          <section>
+          <section class=${inputStyles['input-block']}>
             <label for="cpf">CPF</label>
             <input type="number" id="cpf" name="cpf" />
           </section>
 
-          <section>
+          <section class=${inputStyles['input-block']}>
             <label for="phone">Telefone</label>
             <input type="tel" id="phone" name="phone" />
           </section>

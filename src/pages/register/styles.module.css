@@ -31,6 +31,12 @@
   margin-block-end: var(--spacing-5);
 }
 
+.container > main > .register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .container .link {
   --radius: 2rem;
   --icon-size: 2.4rem;

@@ -1,0 +1,59 @@
+.input-block {
+  --border-size: 2px;
+  position: relative;
+}
+
+.input-block::before,
+.input-block::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  inline-size: 100%;
+  block-size: var(--border-size);
+
+  background-color: hsl(var(--text-2));
+}
+
+.input-block::after {
+  --bg: var(--text-3);
+
+  background-color: hsl(var(--bg));
+
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.input-block[data-invalid]::after {
+  --bg: 0 75% 50%;
+  transform: scaleX(100%);
+}
+
+.input-block:focus-within::after {
+  transform: scaleX(100%);
+}
+
+.input-block > label {
+  display: inline-block;
+
+  font-size: 1.4rem;
+  color: hsl(var(--text-1) / 0.8);
+
+  padding-inline-start: var(--spacing-1);
+}
+
+.input-block > input {
+  inline-size: 100%;
+
+  letter-spacing: 0.4px;
+  color: hsl(var(--text-1));
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  padding: 0.5rem var(--spacing-1);
+}
