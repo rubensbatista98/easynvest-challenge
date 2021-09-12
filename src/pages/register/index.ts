@@ -1,5 +1,6 @@
 import logo from 'assets/logo-icon.svg';
 import inputStyles from 'styles/components/input.module.css';
+import buttonStyles from 'styles/components/button.module.css';
 
 import registerStyles from './styles.module.css';
 
@@ -74,7 +75,12 @@ function Register() {
             <input type="tel" id="phone" name="phone" />
           </section>
 
-          <button type="submit">Cadastrar</button>
+          <button
+            type="submit"
+            class="${buttonStyles.button} ${buttonStyles['-rouded']}"
+          >
+            Cadastrar
+          </button>
         </form>
       </main>
     </div>

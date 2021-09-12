@@ -1,4 +1,7 @@
 .button {
+  position: relative;
+  display: inline-block;
+
   font-weight: 600;
   font-size: var(--fs-1);
   text-decoration: none;
@@ -6,12 +9,17 @@
   color: #fff;
   background-color: hsl(var(--btn-surface));
 
+  border: none;
   padding: var(--spacing-1) var(--spacing-2);
 
-  display: inline-block;
-  position: relative;
   isolation: isolate;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .button:active {
@@ -52,6 +60,10 @@
 .button:hover::before,
 .button:hover::after {
   transform: translate(0%);
+}
+
+.button.-rouded {
+  border-radius: 100rem;
 }
 
 /*41.25rem = 660px*/
