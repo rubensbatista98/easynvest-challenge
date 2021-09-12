@@ -31,6 +31,59 @@
   margin-block-end: var(--spacing-5);
 }
 
+.container .link {
+  --radius: 2rem;
+  --icon-size: 2.4rem;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: hsl(var(--text-1));
+
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.container .link::before {
+  content: '';
+
+  inline-size: calc(var(--icon-size) * 2);
+  block-size: 100%;
+
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: hsl(var(--text-3));
+  border-radius: var(--radius);
+
+  opacity: 0.2;
+  transition: inline-size 250ms ease-in-out;
+}
+
+.container .link:hover::before,
+.container .link:focus-visible::before {
+  inline-size: 100%;
+}
+
+.container .link:focus-visible {
+  outline: 2px solid hsl(var(--text-1));
+  outline-offset: 5px;
+}
+
+.container .link > svg {
+  inline-size: var(--icon-size);
+  block-size: 100%;
+}
+
 /* 41.25rem = 660px */
 @media (min-width: 41.25rem) {
   .container {
